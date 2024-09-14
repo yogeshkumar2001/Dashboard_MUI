@@ -19,7 +19,7 @@ const smallValues = [0, 2, 3, 4, 6, 8, 7, 9, 15, 6, 8, 7, 12];
 const largeValues = [60, 65, 66, 68, 87, 82, 83, 89, 92, 75, 76, 77, 91];
 const card = (
     <React.Fragment>
-        <CardContent>
+        <CardContent sx={{width: "100%" }}>
 
             <Typography sx={{ typography: "body2" }} component="div">
                 User
@@ -34,8 +34,8 @@ const card = (
 
 export default function ChartCard() {
     return (
-        <Grid size={6}>
-            <Card variant="outlined">{card}</Card>
-        </Grid>
+        // <Grid item xs={3} sm={5} md={4} lg={5}>
+        <Card variant="outlined" sx={{width: "100%" }}>{card}</Card>
+        // </Grid>
     );
 }

@@ -21,7 +21,7 @@ export default function Breadcrumb() {
     ];
 
     return (
-        <Stack spacing={2}>
+        <Stack spacing={1} sx={{ml:"-15px"}} bgcolor={"primary"}>
             <Breadcrumbs separator="›" aria-label="breadcrumb">
                 {breadcrumbs}
             </Breadcrumbs>

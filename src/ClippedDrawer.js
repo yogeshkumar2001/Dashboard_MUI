@@ -18,6 +18,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Breadcrumb from './BreadCrumb';
 import DashBoardGrid from './DashBoardGrid';
+import { Home } from '@mui/icons-material';
 
 const drawerWidth = 240;
 
@@ -46,24 +47,11 @@ function ClippedDrawer(props) {
             <Toolbar />
             <Divider />
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                {['Home', 'Dashboards', 'Reports', 'Charts','Settings', 'Feedback'].map((text, index) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                {index % 2 === 0 ? <Home /> : <MailIcon />}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>
@@ -97,7 +85,7 @@ function ClippedDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div">
-                        Responsive drawer
+                        Responsive MUI Dashboard
                     </Typography>
                 </Toolbar>
             </AppBar>
